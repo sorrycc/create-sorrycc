@@ -1,6 +1,6 @@
-# <%= name %>
+# create-sorrycc
 
-Description.
+Self-use boilerplates.
 
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
