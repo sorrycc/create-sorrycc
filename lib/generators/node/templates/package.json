@@ -1,0 +1,40 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.1-alpha.1",
+  "description": "",
+  "repository": "<%= repo %>/<%= name %>",
+  "author": {
+    "name": "chencheng",
+    "email": "sorrycc@gmail.com"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  <% if (hasCli) { %>
+  "bin": {
+    "<%= name %>": "cli.js"
+  },
+  <% } %>
+  "scripts": {
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "test": "umi-test"
+  },
+  "dependencies": {
+    <% if (hasCli) { %>
+    "chalk": "^2.4.1",
+    "yargs-parser": "^11.0.0"
+    <% } %>
+  },
+  "devDependencies": {
+    "np": "^3.0.4",
+    "umi-test": "^1.3.1"
+  },
+  "files": [
+    <% if (hasCli) { %>
+    "cli.js"
+    <% } else { %>
+    "index.js"
+    <% } %>
+  ],
+  "license": "MIT"
+}
