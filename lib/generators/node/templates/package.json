@@ -16,7 +16,8 @@
   },
   <% } %>
   "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "changelog": "git changelog CHANGELOG.md && git commit -am 'update CHANGELOG.md'",
+    "prepublishOnly": "npm run changelog && np --no-cleanup --yolo --no-publish",
     "test": "umi-test"
   },
   "dependencies": {
