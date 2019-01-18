@@ -11,8 +11,8 @@ const emptyDir = require('empty-dir');
 // print version and @local
 const args = yParser(process.argv.slice(2));
 if (args.v || args.version) {
-  console.log(require('../package').version);
-  if (existsSync(join(__dirname, '../.local'))) {
+  console.log(require('./package').version);
+  if (existsSync(join(__dirname, './.local'))) {
     console.log(chalk.cyan('@local'));
   }
   process.exit(0);
