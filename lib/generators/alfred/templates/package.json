@@ -10,23 +10,18 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  <% if (hasCli) { %>
-  "bin": {
-    "<%= name %>": "cli.js"
-  },
-  <% } %>
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
     "test": "umi-test"
   },
   "dependencies": {
-    <% if (hasCli) { %>
-    "chalk": "^2.4.1",
-    "yargs-parser": "^11.0.0"
-    <% } %>
+    "alfy": "^0.6.0"
   },
   "devDependencies": {
+    "alfy-test": "^0.3.0",
     "coveralls": "3",
     "husky": "1",
     "lint-staged": "8",
@@ -46,11 +41,13 @@
     ]
   },
   "files": [
-    <% if (hasCli) { %>
-    "cli.js"
-    <% } else { %>
-    "index.js"
-    <% } %>
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow"
   ],
   "license": "MIT"
 }
