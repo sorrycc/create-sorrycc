@@ -24,4 +24,4 @@ $ yarn global add <%= name %>
 
 ## LICENSE
 
-MIT
+MIT © [Chen Cheng](https://sorrycc.com)

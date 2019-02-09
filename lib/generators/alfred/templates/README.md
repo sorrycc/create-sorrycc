@@ -20,8 +20,10 @@ Description.
 $ yarn global add <%= name %>
 ```
 
+Requires [Node.js](https://nodejs.org/) 8+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).
+
 ## Usage
 
 ## LICENSE
 
-MIT
+MIT © [Chen Cheng](https://sorrycc.com)
